@@ -84,7 +84,7 @@ app.post('/favicon', authenticate, upload.single('image'), async (req, res) => {
       .composite([{ input: mask, blend: 'dest-in' }])
       .toBuffer();
 
-    const favicon = outputBuffer.toString('base64')};
+    const favicon = outputBuffer.toString('base64');
     res.json({ favicon });
   } catch (err) {
     console.error('Favicon generation error:', err);
